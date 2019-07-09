@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LosPendientes from './components/LosPendientes.jsx';
+import Pendientes from './components/Pendientes.jsx';
+import Clock from './components/Clock';
+
 
 const rootEl = document.getElementById('root');
 
@@ -9,15 +11,15 @@ const rootEl = document.getElementById('root');
             render(){
                     return(
                    
-                             <div className="App">
+                             <div className="App" >
+                                <Clock />
+                                <Pendientes/>
                                 
-                                <p> Hello world (:</p>
                                </div>
                     );
 
             }
   }
-
     ReactDOM.render(
         <App />, rootEl
     );
