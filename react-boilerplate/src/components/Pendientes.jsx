@@ -105,7 +105,12 @@ import LosPendientes from './LosPendientes.jsx';
                   }
             render(){
                     return(
-                             <div  className="Pendientes" >
+                             <div  className="Pendientes" 
+                                    style={{
+                                         display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItem: 'center',
+                                           }}>
                                 <h1>\/ Type your todos \/</h1>
                                 <form  onSubmit={this.onSubmit}>
                                     <input  

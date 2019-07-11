@@ -11,9 +11,16 @@ const rootEl = document.getElementById('root');
             render(){
                     return(
                    
-                             <div className="App" >
-                                <Clock />
-                                <Pendientes/>
+                             <div className="App" 
+                                    style={{
+                                             display: 'flex',
+                                            flexDirection: 'column',
+                                            justifyContent: 'space-around',
+                                            alignItems: 'center'
+                                            }}>
+                                
+                                    <Clock />
+                                    <Pendientes/>
                                 
                                </div>
                     );

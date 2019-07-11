@@ -84,18 +84,16 @@ class Clock extends React.Component{
                                           deg: sdeg},
                             dayOfWeek: dw,
                           });
-            var timeText  = document.getElementById("time-text");
+            
             var seconds = document.getElementById("seconds");
             if (this.state.currentSec.deg >180){
-                  timeText.classList.add("o180");
-                  timeText.classList.remove("u180");
+               
                   seconds.classList.add("o180");
                   seconds.classList.remove("u180");
             document.documentElement.style.setProperty('--deg-sec', `${this.state.currentSec.deg-90}deg` );
                 }
                 else{
-                    timeText.classList.add("u180");
-                    timeText.classList.remove("o180");
+                   
                     seconds.classList.add("u180");
                     seconds.classList.remove("o180");
                 document.documentElement.style.setProperty('--deg-sec', `${this.state.currentSec.deg+90}deg` );    
