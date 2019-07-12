@@ -122,7 +122,10 @@ class Clock extends React.Component{
     }
   render(){
       return(
-             <div className="Clock">
+             <div className="Clock"
+                    style={{
+                        flexGrow: '3',
+                    }}>
               <ClockDisplay day={this.state.currentDay} month={this.state.currentMonth} year={this.state.currentYear} 
                     hour={this.state.currentHour.hour} hourPercent={this.state.currentHour.percent} sec={this.state.currentSec.sec} 
                     secPercent={this.state.currentSec.percent} min={this.state.currentMin.min} minPercent = {this.state.currentMin.percent}

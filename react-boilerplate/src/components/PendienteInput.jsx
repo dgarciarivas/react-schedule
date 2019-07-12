@@ -30,8 +30,9 @@ class PendienteInput extends React.Component{
                 event.preventDefault();
                 console.log('PendienteInput.onSubmitPen start')
                 console.log(this.props)
-                if(this.state.newpendientetxt == undefined || this.state.newpendientetxt === ' ' || this.state.newpendientetxt === '' ){
+                if(this.state.newpendientetxt == undefined || this.state.newpendientetxt === ' ' || this.state.newpendientetxt === '' || this.state.newpendientetxt === null ){
                     alert("Please enter a value");
+
                 }
                 else{
                     var addition = this.state.newpendientetxt;
@@ -79,12 +80,24 @@ class PendienteInput extends React.Component{
                 render(){
                   console.log(this.props)
                       return(
-                        <div className = "PendienteInput">
+                        <div className = "PendienteInput" 
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center'
+                              }}>
                            
                             <form className = 'textinput' onSubmit={this.onSubmitPen}>
-                                <input                                    
+                                <input    
+                                  style= {{
+                                            textAlign: 'center',
+                                             backgroundColor: '#521189',
+                                              border: 'none',
+                                              color: '#51D500',
+
+                                        }}                               
                                     value={this.state.newpendientetxt} 
-                                    placeholder={`Pendiente de ${this.props.listName}`}
+                                    placeholder={`Todo for ${this.props.listName}`}
                                     onChange={this.onChangePen}
                         
                                 />

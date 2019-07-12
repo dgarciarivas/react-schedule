@@ -15,13 +15,12 @@ const rootEl = document.getElementById('root');
                                     style={{
                                              display: 'flex',
                                             flexDirection: 'column',
-                                            justifyContent: 'space-around',
-                                            alignItems: 'center'
+                                            
+                                           
                                             }}>
                                 
                                     <Clock />
                                     <Pendientes/>
-                                
                                </div>
                     );
 

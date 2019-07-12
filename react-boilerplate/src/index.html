@@ -12,53 +12,27 @@
           --deg-hour: 0deg;
 
         }
-
+::placeholder { 
+  color: gold;
+  background-color: #521189;
+  border: none;
+  
+}
          html { 
         background: #521189;
-      
-    }
-      
-     .PendienteInput{
+        height: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .LosPendientesContainer{
-         display: flex;
-         flex-direction: row;
-         flex-wrap: nowrap;
-         justify-content: space-around;
-    }
-    .LosPendientes{
-        margin: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .ListHeader{
-        color: white;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-between;
-        
-    }
-    .List {
-            color: white;
-            display: flex;
-            align-items: center;
-    }
-   
-    .button:hover {
-         color: red;
+         justify-content: center;
+  align-items: center;
       
-     }
-    .button { 
+   		 }
 
-        background-color: white;
-         color: black;
-    }
+body{
+    height: 100%;
+    display: flex;
+    width: 100%;
+}
+   
         .clock{
                 border-radius: 50%;
                 background: transparent;
@@ -72,12 +46,13 @@
               }
          .o180{
             
-      background-image: linear-gradient(-90deg,  var(--bar-color) 50%,transparent 50%), linear-gradient(var(--deg), transparent 50%, var(--bar-color) 50%);        
-  
+                     background-image: linear-gradient(-90deg,  var(--bar-color) 50%,transparent 50%), linear-gradient(var(--deg), transparent 50%, var(--bar-color) 50%);        
                }
+
          .u180{
             background-image: linear-gradient( var(--deg), transparent 50%, white 50%),linear-gradient(-90deg, var(--bar-color) 50%, transparent 50%);              
         }
+
         .hours-indicator{   
                 --deg: var(--deg-hour);
                 --bar-color: var(--hour-color);
@@ -87,12 +62,12 @@
                 width: 250px;
                 background-color: white;
             }
+
         .min-indicator{
                 --deg: var(--deg-min);
                 --bar-color: var(--minute-color);
                 border-radius: 50%;
                 border: 1px solid #333;
-
                 height: 200px;
                 width: 200px;
                 background-color: white;
@@ -111,12 +86,12 @@
         .time-text{
                 -deg: var(--deg-sec);
                 --bar-color: var(--inner-circle);
-                color: white;
+                color: gold;
                 border-radius: 50%;
                 width: 100px;
                 height: 100px;
                 text-align: center;
-                background-color: black;
+                background-color: #521189;
                 
         }
         p.clock-text {
@@ -128,7 +103,10 @@
         p#weekday{
             padding-top: 20px;
         }
-    
+        h1{
+            color: gold;
+        }
+}
 
 	</style>
     <meta charset="UTF-8">

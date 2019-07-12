@@ -109,11 +109,21 @@ import LosPendientes from './LosPendientes.jsx';
                                     style={{
                                          display: 'flex',
                                         flexDirection: 'column',
-                                        alignItem: 'center',
+                                          justifyContent: 'center',
+                                          textAlign: 'center',
+                                          flexGrow: '1',
                                            }}>
-                                <h1>\/ Type your todos \/</h1>
+                                <h1>Todos?</h1>
                                 <form  onSubmit={this.onSubmit}>
                                     <input  
+                                        style= {{
+                                            textAlign: 'center',
+                                             backgroundColor: '#521189',
+                                              border: 'none',
+                                              color: 'white',
+                                              flexGrow: 1,
+
+                                        }}
                                         type = 'text'                                  
                                         value={this.state.titulotxt}                                       
                                         placeholder='Start here'
@@ -121,7 +131,13 @@ import LosPendientes from './LosPendientes.jsx';
                                        onSubmit={this.onSubmit} 
                                     />
                                 </form>
-                                <div className="LosPendientesContainer" >
+                                <div className="LosPendientesContainer" 
+                                      style={{
+                                            display: 'flex',
+                                         flexDirection: 'row',
+                                         flexWrap: 'nowrap',
+                                         justifyContent: 'space-around'
+                                        }}>
 
                                     {
                                       Object.keys(JSON.parse(window.localStorage.getItem('storage'))).map((d, i) => (<LosPendientes removeItem={this.removeItem}  name={d} index={i} key={'k[-'+ i} />)) 
