@@ -15,7 +15,7 @@ import ListItemButton from './ListItemButton';
                                     props.name
                                 }</div>
                         </div>
-                        <ListItemButton index = {props.index} removeItem = {props.removeItem}/>
+                        <ListItemButton name = {props.name} index = {props.index} removeItem = {props.removeItem} id = {'k4^'+props.name}/>
                 </div>
             )
     }  

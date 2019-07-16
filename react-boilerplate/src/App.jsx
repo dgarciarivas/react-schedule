@@ -18,7 +18,6 @@ const rootEl = document.getElementById('root');
                                             
                                            
                                             }}>
-                                
                                     <Clock />
                                     <Pendientes/>
                                </div>
@@ -26,12 +25,7 @@ const rootEl = document.getElementById('root');
 
             }
   }
-    ReactDOM.render(
-        <App />, rootEl
-    );
-
-
-
+    ReactDOM.render(<App />, rootEl);
 
 // This checks for local changes and automatically refreshes the browser (hot-reloading)
 if (module.hot) {

@@ -102,7 +102,7 @@ class PendienteInput extends React.Component{
                         
                                 />
                             </form>
-                           {JSON.parse(window.localStorage.getItem('storage'))[[this.props.listName]].map((d, i) => (<List removeItem={this.removeItemPen}  name={d} index={i} key={'k[-'+ i} />)) }
+                           {JSON.parse(window.localStorage.getItem('storage'))[[this.props.listName]].map((d, i) => (<List removeItem={this.removeItemPen}  name={d} index={i}  />)) }
                           
                          </div>
                             );
