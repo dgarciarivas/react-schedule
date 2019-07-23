@@ -10,12 +10,12 @@ import ListItemButton from './ListItemButton';
                                 alignItems: 'center',
                                 fontSize: 'x-large'
                             }}>
-                         <div  > 
-                                <div>{
+                         
+                                <div className="ListItem" onClick={() => {props.changeValue(props.name, props.index, props.listName)}}>{
                                     props.name
                                 }</div>
-                        </div>
-                        <ListItemButton name = {props.name} index = {props.index} removeItem = {props.removeItem} id = {'k4^'+props.name}/>
+                        
+                                <ListItemButton name = {props.name} index = {props.index} removeItem = {props.removeItem} id = {'k4^'+props.name}/>
                 </div>
             )
     }  

@@ -15,7 +15,7 @@ class PendienteInput extends React.Component{
                         newpendientetxt: undefined,
                      } 
                      
-                    
+                    this.changeValue  = this.changeValue.bind(this);
                     this.onChangePen = this.onChangePen.bind(this);
                     this.removeItemPen = this.removeItemPen.bind(this);
                     this.onSubmitPen = this.onSubmitPen.bind(this);
@@ -76,9 +76,21 @@ class PendienteInput extends React.Component{
                   window.localStorage.setItem('storage', JSON.stringify(retrieve));
                   console.log("PendienteInput.removeItem end")
                   this.setState({pendienteList: []})
-                }   
-                render(){
-                  console.log(this.props)
+                }
+            changeValue = (name, index, listName)=>{
+              console.log('I clicked on '+name+' its index is '+ index+ ' in the list '+listName);
+              let edit = prompt('What do you want to change this to?');
+              if(edit === null || edit == '' || edit === undefined){
+                edit = name;
+              }
+              console.log('Recieved new value for '+ name+'. Changed to '+edit);
+              let retrieve = JSON.parse(window.localStorage.getItem("storage"));
+              let retrieveList = retrieve[listName];
+              retrieveList[index] = edit
+              console.log(retrieve);
+              window.localStorage.setItem('storage', JSON.stringify(retrieve)); //Edit master list is working but rerendering is not automatic yet
+            }   
+              render(){
                       return(
                         <div className = "PendienteInput" 
                               style={{
@@ -102,7 +114,7 @@ class PendienteInput extends React.Component{
                         
                                 />
                             </form>
-                           {JSON.parse(window.localStorage.getItem('storage'))[[this.props.listName]].map((d, i) => (<List removeItem={this.removeItemPen}  name={d} index={i}  />)) }
+                           {JSON.parse(window.localStorage.getItem('storage'))[[this.props.listName]].map((d, i) => (<List listName = {this.props.listName}removeItem={this.removeItemPen}  changeValue = {this.changeValue} name={d} index={i}  />)) }
                           
                          </div>
                             );
