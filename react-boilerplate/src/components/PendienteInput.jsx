@@ -75,7 +75,7 @@ class PendienteInput extends React.Component{
                   console.log('Need to save new list: ', retrieve);
                   window.localStorage.setItem('storage', JSON.stringify(retrieve));
                   console.log("PendienteInput.removeItem end")
-                  this.setState({pendienteList: []})
+                  this.setState({pendienteList: []}) // setState is called in order to rerender
                 }
             changeValue = (name, index, listName)=>{
               console.log('I clicked on '+name+' its index is '+ index+ ' in the list '+listName);
@@ -88,7 +88,8 @@ class PendienteInput extends React.Component{
               let retrieveList = retrieve[listName];
               retrieveList[index] = edit
               console.log(retrieve);
-              window.localStorage.setItem('storage', JSON.stringify(retrieve)); //Edit master list is working but rerendering is not automatic yet
+              window.localStorage.setItem('storage', JSON.stringify(retrieve));
+              this.setState({pendienteList: []}) //setState is called in order to rerender
             }   
               render(){
                       return(
