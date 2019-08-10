@@ -7,6 +7,7 @@ import ListHeaderButton from './ListHeaderButton';
     const LosPendientes = (props) => {
             return(
                     <div className = "LosPendientes" 
+                         draggable="true" 
                           style ={{
                             
                              display: 'flex',
@@ -14,7 +15,7 @@ import ListHeaderButton from './ListHeaderButton';
                             alignItems: 'center',
                             justifyContent: 'flex-start'
                           }}>
-                        <div className="ListHeader" 
+                        <div className="ListHeaderContainer" 
                               style ={
                                     {
                                         color: 'white',

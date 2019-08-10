@@ -13,8 +13,8 @@ const ListHeaderButton = (props)=>{
                                           margin: '10px',
                                           cursor: 'default',
                                           }} 
-                                  onMouseOver={()=>{let element = document.getElementById(`${props.id}`); console.log(props); element.style.setProperty('color', 'red'); element.style.setProperty('border', '1px solid red');}}
-                                  onMouseOut = {()=>{let element = document.getElementById(`${props.id}`); console.log(element); element.style.setProperty('color', 'gold'); element.style.setProperty('border', '1px solid gold');}}
+                                  onMouseEnter={()=>{let element = document.getElementById(`${props.id}`); console.log(props); element.style.setProperty('color', 'red'); element.style.setProperty('border', '1px solid red');}}
+                                  onMouseLeave = {()=>{let element = document.getElementById(`${props.id}`); console.log(element); element.style.setProperty('color', 'gold'); element.style.setProperty('border', '1px solid gold');}}
                                   onClick={() => {props.removeItem(props.index); console.log('props when onclick is called',props)}}>
 
                                   X

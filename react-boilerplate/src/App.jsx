@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Pendientes from './components/Pendientes.jsx';
 import Clock from './components/Clock';
+import SettingsBar from './components/SettingsBar';
 
 
 const rootEl = document.getElementById('root');
@@ -18,6 +19,7 @@ const rootEl = document.getElementById('root');
                                             
                                            
                                             }}>
+                                   <SettingsBar />
                                     <Clock />
                                     <Pendientes/>
                                </div>

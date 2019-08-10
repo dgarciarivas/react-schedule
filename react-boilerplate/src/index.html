@@ -24,10 +24,8 @@
 
 body{
     height: 100%;
-    display: flex;
     width: 100%;
-      justify-content: center;
-  align-items: center;
+
 }
    
         .clock{
@@ -54,31 +52,16 @@ body{
         .hours-indicator{   
                 --deg: var(--deg-hour);
                 --bar-color: var(--hour-color);
-                border-radius: 50%;
-                border: 1px solid #333;
-                height: 250px;
-                width: 250px;
-                background-color: white;
             }
 
         .min-indicator{
                 --deg: var(--deg-min);
                 --bar-color: var(--minute-color);
-                border-radius: 50%;
-                border: 1px solid #333;
-                height: 200px;
-                width: 200px;
-                background-color: white;
+
             }
         .sec-indicator{
                 --deg: var(--deg-sec);
                 --bar-color: var(--second-color);
-                border-radius: 50%;
-                border: 1px solid #333;
-                
-                height: 150px;
-                width: 150px;
-                background-color: white;
                     
         }
         .time-text{
@@ -97,6 +80,7 @@ body{
         h1{
             color: gold;
         }
+
 }
 
 	</style>
@@ -105,8 +89,10 @@ body{
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lets get this $</title>
     
+    
 </head>
 <body>
+   
     <div id="root"></div>
 </body>
 </html>

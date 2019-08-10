@@ -7,7 +7,7 @@ import LosPendientes from './LosPendientes.jsx';
              super();
              var storage = window.localStorage.storage;
              console.log(storage, "this is the variable storage which should be everything stored locally, the call is window.localStorage.storage")
-             if(window.localStorage.storage === undefined || window.localStorage.storage === [] || window.localStorage.storage === ""){
+             if(window.localStorage.storage === undefined  || window.localStorage.storage === {}){
               let init = prompt('Welcome to pendientes! Start your pinche Pendientes:');
                 console.log('initializing with', init);
                 var storage = {
@@ -34,6 +34,7 @@ import LosPendientes from './LosPendientes.jsx';
               this.onSubmit = this.onSubmit.bind(this);
               this.removeItem = this.removeItem.bind(this);
               this.handleOnSubmit = this.handleOnSubmit.bind(this);
+              
             
               
           }
@@ -103,6 +104,7 @@ import LosPendientes from './LosPendientes.jsx';
                 this.setState({Lista: Object.keys(JSON.parse(window.localStorage.getItem('storage')))})
                 console.log('end of app.removeItem');
                   }
+
             render(){
                     return(
                              <div  className="Pendientes" 
@@ -136,11 +138,11 @@ import LosPendientes from './LosPendientes.jsx';
                                             display: 'flex',
                                          flexDirection: 'row',
                                          flexWrap: 'nowrap',
-                                         justifyContent: 'space-around'
+                                         justifyContent: 'space-evenly'
                                         }}>
 
                                     {
-                                      Object.keys(JSON.parse(window.localStorage.getItem('storage'))).map((d, i) => (<LosPendientes removeItem={this.removeItem}  name={d} index={i} key={'k[-'+ i} />)) 
+                                      Object.keys(JSON.parse(window.localStorage.getItem('storage'))).map((d, i) => (<LosPendientes removeItem={this.removeItem}  onDrag = {this.onDrag} name={d} index={i} key={'k[-'+ i} />)) 
                                     }
                                 </div>
                                </div>

@@ -122,7 +122,7 @@ class Clock extends React.Component{
     }
   render(){
       return(
-             <div className="Clock"
+             <div className="Clock" id = "ClockComponent"
                     style={{
                             
                         

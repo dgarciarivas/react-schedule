@@ -11,7 +11,7 @@ import ListItemButton from './ListItemButton';
                                 fontSize: 'x-large'
                             }}>
                          
-                                <div className="ListItem" onClick={() => {props.changeValue(props.name, props.index, props.listName)}}>{
+                                <div className="ListItem"  onClick={() => {props.changeValue(props.name, props.index, props.listName)}}>{
                                     props.name
                                 }</div>
                         
