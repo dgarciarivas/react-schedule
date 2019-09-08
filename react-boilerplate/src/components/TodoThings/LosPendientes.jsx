@@ -11,9 +11,19 @@ import ListHeaderButton from './ListHeaderButton';
                           style ={{
                             
                              display: 'flex',
+                             margin: '20px',
+                             padding: '10px',
                             flexDirection: 'column',
                             alignItems: 'center',
-                            justifyContent: 'flex-start'
+
+                            borderStyle: 'dashed',
+                            borderColor: 'gold',
+                            
+
+                             maxHeight: '500px',
+             
+
+
                           }}>
                         <div className="ListHeaderContainer" 
                               style ={
@@ -23,18 +33,19 @@ import ListHeaderButton from './ListHeaderButton';
                                         flexDirection: 'row',
                                         flexWrap: 'nowrap',
                                         alignItems: 'center',
-                                        flexGrow: '100%',  
+                            
                                     }
                                       }>
              
-                             <div className="PendienteName" 
+                          <div className="PendienteName" 
                                   style={{
-                                      fontSize: 'xx-large',
+                                      fontSize: 'x-large',
+                                      
                                   }}> 
                                   {
-                                      props.name
+                                      '#'+(props.index+1)+'. '+props.name
                                   }
-                             </div>
+                            </div>
 
                             <ListHeaderButton id = {props.name} removeItem = {props.removeItem} index={props.index}/>
                       

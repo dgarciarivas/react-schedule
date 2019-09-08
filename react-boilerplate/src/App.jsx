@@ -1,27 +1,47 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Pendientes from './components/Pendientes.jsx';
-import Clock from './components/Clock';
-import SettingsBar from './components/SettingsBar';
+import Pendientes from './components/TodoThings/Pendientes.jsx';
+import Clock from './components/ClockThings/Clock';
+import SettingsBar from './components/SettingsThings/SettingsBar';
 
 
 const rootEl = document.getElementById('root');
 
 
     class App extends React.Component{
+      constructor(){
+        super();
+          var height = screen.height;
+          var width = screen.width;
+          var px = 'px';
+          
+      }
             render(){
                     return(
                    
-                             <div className="App" 
+                             <div id="AppContainer"
                                     style={{
                                              display: 'flex',
-                                            flexDirection: 'column',
-                                            
+                                            flexDirection: 'row',
+                                  
+                                          
                                            
                                             }}>
-                                   <SettingsBar />
-                                    <Clock />
-                                    <Pendientes/>
+                                            <div id='spacer' style={{width: '100px', height:'100%'}}></div>
+                                      <div id="PendientesContainer"
+                                            style={{
+                                              height: '680px',
+                                              width: '1900px',
+                                              overflowX: 'scroll',
+
+                                            }}>
+                                                <Pendientes/>
+                                      </div>
+
+
+                                        <Clock />
+                             
+
                                </div>
                     );
 

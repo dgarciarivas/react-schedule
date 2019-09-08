@@ -13,8 +13,10 @@ const SettingsBar = ()=>{
               display: 'flex',
               flexDirection: 'row',
              justifyContent: 'space-evenly',
+
               }}>
       		<div id = "clock-setting-text"
+
       			 onMouseEnter={()=>{console.log('hovered on'); document.getElementById('ClockMenu').style.setProperty('visibility', 'visible'); document.getElementById('clock-setting-text').setAttribute('hidden', true);}}
       			 //onMouseOut = {()=>{console.log('hovered off');  document.getElementById('ClockMenu').setAttribute('hidden', true); document.getElementById('clock-setting-text').removeAttribute('hidden');}}>
       				>

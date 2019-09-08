@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" background-image="./src/components/images/grad.png">
 <head>
 	<style>
 		:root {
@@ -19,14 +19,12 @@
   
 }
          html { 
-        background: #521189;      
+        background: #521189; 
+         height: 690px;
+        width: 1280px;
+        margin: none;     
    		 }
-
-body{
-    height: 100%;
-    width: 100%;
-
-}
+body{  margin: none;}
    
         .clock{
 
@@ -52,31 +50,16 @@ body{
         .hours-indicator{   
                 --deg: var(--deg-hour);
                 --bar-color: var(--hour-color);
-                border-radius: 50%;
-                border: 1px solid #333;
-                height: 250px;
-                width: 250px;
-                background-color: white;
             }
 
         .min-indicator{
                 --deg: var(--deg-min);
                 --bar-color: var(--minute-color);
-                border-radius: 50%;
-                border: 1px solid #333;
-                height: 200px;
-                width: 200px;
-                background-color: white;
+
             }
         .sec-indicator{
                 --deg: var(--deg-sec);
                 --bar-color: var(--second-color);
-                border-radius: 50%;
-                border: 1px solid #333;
-                
-                height: 150px;
-                width: 150px;
-                background-color: white;
                     
         }
         .time-text{
@@ -90,7 +73,7 @@ body{
                 background-color: #521189;
                 
         }
- 
+      
      
         h1{
             color: gold;
@@ -108,6 +91,7 @@ body{
 </head>
 <body>
    
-    <div id="root"></div>
+    <div id="root" ></div>
+
 <script type="text/javascript" src="js/app.bundle.js"></script><script type="text/javascript" src="js/vendor.bundle.js"></script></body>
 </html>

@@ -3,10 +3,12 @@ import React from 'react';
 const TodoMenu = ()=>{
 	return(
 			<div id='TodoMenu'  style={{display: 'flex',
-                                              flexDirection: 'column',
+                                              flexDirection: 'row',
+                                              alignItems: 'space-around',
                                               backgroundColor: 'blue',
                                               color: 'orange', 
-                                              visibility: 'hidden',          }} 
+                                              visibility: 'hidden',  
+                                                      }} 
 			onMouseLeave = {()=>{console.log('hovered off');  document.getElementById('TodoMenu').style.setProperty('visibility', 'hidden'); document.getElementById('todo-setting-text').removeAttribute('hidden');}}>		
       					
       					

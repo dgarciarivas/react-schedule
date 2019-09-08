@@ -97,7 +97,8 @@ class PendienteInput extends React.Component{
                               style={{
                                 display: 'flex',
                                 flexDirection: 'column',
-                                alignItems: 'center'
+                                alignItems: 'center',
+                                overflowY: 'scroll',
                               }}>
                            
                             <form className = 'textinput' onSubmit={this.onSubmitPen}>
@@ -115,7 +116,7 @@ class PendienteInput extends React.Component{
                         
                                 />
                             </form>
-                           {JSON.parse(window.localStorage.getItem('storage'))[[this.props.listName]].map((d, i) => (<List listName = {this.props.listName}removeItem={this.removeItemPen}  changeValue = {this.changeValue} name={d} index={i}  />)) }
+                           {JSON.parse(window.localStorage.getItem('storage'))[[this.props.listName]].map((d, i) => (<List listName = {this.props.listName} removeItem={this.removeItemPen}  changeValue = {this.changeValue} name={d} index={i}  />)) }
                           
                          </div>
                             );

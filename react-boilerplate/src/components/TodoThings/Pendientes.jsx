@@ -113,7 +113,9 @@ import LosPendientes from './LosPendientes.jsx';
                                         flexDirection: 'column',
                                           justifyContent: 'center',
                                           textAlign: 'center',
-                                          flexGrow: '1',
+                                          maxHeight: '680px',
+                                          border: 'black',
+                                    
                                            }}>
                                 <h1>Todos?</h1>
                                 <form  onSubmit={this.onSubmit}>
@@ -123,7 +125,7 @@ import LosPendientes from './LosPendientes.jsx';
                                              backgroundColor: '#521189',
                                               border: 'none',
                                               color: 'white',
-                                              flexGrow: 1,
+                                  
 
                                         }}
                                         type = 'text'                                  
@@ -133,18 +135,20 @@ import LosPendientes from './LosPendientes.jsx';
                                        onSubmit={this.onSubmit} 
                                     />
                                 </form>
-                                <div className="LosPendientesContainer" 
+                                <ul className="LosPendientesContainer" 
                                       style={{
-                                            display: 'flex',
+                                            display: 'inline-flex',
                                          flexDirection: 'row',
                                          flexWrap: 'nowrap',
-                                         justifyContent: 'space-evenly'
+                                         
+                                         justifyContent: 'space-evenly',
+                                        overflowX: 'scroll',
                                         }}>
 
                                     {
-                                      Object.keys(JSON.parse(window.localStorage.getItem('storage'))).map((d, i) => (<LosPendientes removeItem={this.removeItem}  onDrag = {this.onDrag} name={d} index={i} key={'k[-'+ i} />)) 
+                                      Object.keys(JSON.parse(window.localStorage.getItem('storage'))).map((d, i) => (<LosPendientes removeItem={this.removeItem} id={d} onDrag = {this.onDrag} name={d} index={i} key={'k[-'+ i} />)) 
                                     }
-                                </div>
+                                </ul>
                                </div>
                     );
 

@@ -8,14 +8,15 @@ import ListItemButton from './ListItemButton';
                                 color: 'white',
                                 display: 'flex',
                                 alignItems: 'center',
-                                fontSize: 'x-large'
+                                fontSize: 'large',
+
                             }}>
                          
                                 <div className="ListItem"  onClick={() => {props.changeValue(props.name, props.index, props.listName)}}>{
                                     props.name
                                 }</div>
                         
-                                <ListItemButton name = {props.name} index = {props.index} removeItem = {props.removeItem} id = {'k4^'+props.name}/>
+                                <ListItemButton name = {props.name} index = {props.index} removeItem = {props.removeItem} id = {props.name} key = {'k4^'+props.name}/>
                 </div>
             )
     }  
