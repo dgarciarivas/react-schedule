@@ -23,7 +23,7 @@ const rootEl = document.getElementById('root');
                                     style={{
                                              display: 'flex',
                                             flexDirection: 'row',
-                                  
+                                   
                                           
                                            
                                             }}>
@@ -32,7 +32,7 @@ const rootEl = document.getElementById('root');
                                             style={{
                                               height: '680px',
                                               width: '1900px',
-                                              overflowX: 'scroll',
+                                           
 
                                             }}>
                                                 <Pendientes/>

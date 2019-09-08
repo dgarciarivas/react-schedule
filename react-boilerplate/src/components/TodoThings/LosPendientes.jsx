@@ -18,7 +18,7 @@ import ListHeaderButton from './ListHeaderButton';
 
                             borderStyle: 'dashed',
                             borderColor: 'gold',
-                            
+                            position: 'relative',
 
                              maxHeight: '500px',
              
@@ -33,6 +33,7 @@ import ListHeaderButton from './ListHeaderButton';
                                         flexDirection: 'row',
                                         flexWrap: 'nowrap',
                                         alignItems: 'center',
+
                             
                                     }
                                       }>

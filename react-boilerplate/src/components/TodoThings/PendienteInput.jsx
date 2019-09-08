@@ -108,6 +108,7 @@ class PendienteInput extends React.Component{
                                              backgroundColor: '#521189',
                                               border: 'none',
                                               color: '#51D500',
+                                            
 
                                         }}                               
                                     value={this.state.newpendientetxt} 
@@ -116,6 +117,7 @@ class PendienteInput extends React.Component{
                         
                                 />
                             </form>
+
                            {JSON.parse(window.localStorage.getItem('storage'))[[this.props.listName]].map((d, i) => (<List listName = {this.props.listName} removeItem={this.removeItemPen}  changeValue = {this.changeValue} name={d} index={i}  />)) }
                           
                          </div>

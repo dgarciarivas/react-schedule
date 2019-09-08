@@ -127,6 +127,9 @@ class Clock extends React.Component{
                             
                         
                         margin: '10px',
+                        position: 'fixed',
+                        top: '10px',
+                        right: '10px',
                         
                     }}>
               <ClockDisplay day={this.state.currentDay} month={this.state.currentMonth} year={this.state.currentYear} 

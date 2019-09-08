@@ -114,11 +114,12 @@ import LosPendientes from './LosPendientes.jsx';
                                           justifyContent: 'center',
                                           textAlign: 'center',
                                           maxHeight: '680px',
-                                          border: 'black',
+                                       
                                     
                                            }}>
+                                
+                                <form  onSubmit={this.onSubmit} style={{position: 'fixed', top: '20px', left:'600px'}}>
                                 <h1>Todos?</h1>
-                                <form  onSubmit={this.onSubmit}>
                                     <input  
                                         style= {{
                                             textAlign: 'center',
@@ -135,20 +136,25 @@ import LosPendientes from './LosPendientes.jsx';
                                        onSubmit={this.onSubmit} 
                                     />
                                 </form>
-                                <ul className="LosPendientesContainer" 
+                                <section className="LosPendientesContainer" 
                                       style={{
-                                            display: 'inline-flex',
+                                            display: 'flex',
                                          flexDirection: 'row',
                                          flexWrap: 'nowrap',
-                                         
                                          justifyContent: 'space-evenly',
+                                         position: 'absolute',
+                                         top: '120px',
+                                         left: '60px',
+                                         maxWidth: '20000px',
                                         overflowX: 'scroll',
+
+
                                         }}>
 
                                     {
-                                      Object.keys(JSON.parse(window.localStorage.getItem('storage'))).map((d, i) => (<LosPendientes removeItem={this.removeItem} id={d} onDrag = {this.onDrag} name={d} index={i} key={'k[-'+ i} />)) 
+                                      Object.keys(JSON.parse(window.localStorage.getItem('storage'))).map((d, i) => (<LosPendientes removeItem={this.removeItem} id={d}  name={d} index={i} key={'k[-'+ i} />)) 
                                     }
-                                </ul>
+                                </section>
                                </div>
                     );
 
