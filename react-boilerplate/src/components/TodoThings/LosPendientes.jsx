@@ -19,7 +19,9 @@ import ListHeaderButton from './ListHeaderButton';
                             borderStyle: 'dashed',
                             borderColor: 'gold',
                             position: 'relative',
-
+                            //height: '500px',
+                            width: '350px',
+                            maxWidth: '700px',
                              maxHeight: '500px',
              
 
