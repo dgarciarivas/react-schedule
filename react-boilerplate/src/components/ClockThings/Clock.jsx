@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ClockDisplay from "./ClockDisplay";
 
 
@@ -135,7 +134,7 @@ class Clock extends React.Component{
               <ClockDisplay day={this.state.currentDay} month={this.state.currentMonth} year={this.state.currentYear} 
                     hour={this.state.currentHour.hour} hourPercent={this.state.currentHour.percent} sec={this.state.currentSec.sec} 
                     secPercent={this.state.currentSec.percent} min={this.state.currentMin.min} minPercent = {this.state.currentMin.percent}
-                    weekday = {this.state.dayOfWeek}
+                    weekday = {this.state.dayOfWeek} 
                 />
 
                </div>       

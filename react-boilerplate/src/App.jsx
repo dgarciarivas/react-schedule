@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Pendientes from './components/TodoThings/Pendientes.jsx';
 import Clock from './components/ClockThings/Clock';
 import SettingsBar from './components/SettingsThings/SettingsBar';
+import CounterContainer from './components/CounterThings/CounterContainer';
 
 
 const rootEl = document.getElementById('root');
@@ -18,19 +19,22 @@ const rootEl = document.getElementById('root');
       }
             render(){
                     return(
-                   
-                             <div id="AppContainer"
+                            <div id = "AppContainer"
+                                  style={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+
+                                  }}>
+                              
+                              <div id="Pendiente-ClockContainer"
                                     style={{
                                              display: 'flex',
-                                            flexDirection: 'row',
-                                   
-                                          
-                                           
+                                            flexDirection: 'row', 
                                             }}>
-                                            <div id='spacer' style={{width: '100px', height:'100%'}}></div>
+                                            
                                       <div id="PendientesContainer"
                                             style={{
-                                              height: '680px',
+                                              height: '600px',
                                               width: '1900px',
                                            
 
@@ -40,8 +44,10 @@ const rootEl = document.getElementById('root');
 
 
                                         <Clock />
-                             
 
+                             
+                                  </div>
+                                  <CounterContainer />
                                </div>
                     );
 

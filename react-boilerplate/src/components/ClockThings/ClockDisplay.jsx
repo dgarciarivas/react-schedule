@@ -20,6 +20,16 @@ import React from 'react';
                       backgroundColor: 'white',
                     }}>
               <div className="sec-indicator clock" id ="seconds"
+              onClick={ ()=> {
+                                          let del = confirm("Are you sure you want to clear all?"); 
+                                          if (del == true){var twice = confirm("Are you REALLY sure you want to clear all?"); 
+                                                            if(del === true && twice === true){
+                                                                                                window.localStorage.clear(); 
+                                                                                                location.reload();
+                                                                                                console.log('storage cleared')
+                                                                                                }
+                                                          }
+                                      }}
                        style={{
                           //borderRadius: '50%',
                           border: '1px none #333',

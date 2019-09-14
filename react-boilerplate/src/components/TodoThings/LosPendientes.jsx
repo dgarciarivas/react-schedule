@@ -17,12 +17,13 @@ import ListHeaderButton from './ListHeaderButton';
                             alignItems: 'center',
 
                             borderStyle: 'dashed',
+                            borderRadius: '10%',
                             borderColor: 'gold',
                             position: 'relative',
                             //height: '500px',
                             width: '350px',
                             maxWidth: '700px',
-                             maxHeight: '500px',
+                             maxHeight: '300px',
              
 
 

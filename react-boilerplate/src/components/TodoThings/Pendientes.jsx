@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import LosPendientes from './LosPendientes.jsx';
 
+
     class Pendientes extends React.Component{
         constructor(){
              super();
@@ -155,6 +156,7 @@ import LosPendientes from './LosPendientes.jsx';
                                       Object.keys(JSON.parse(window.localStorage.getItem('storage'))).map((d, i) => (<LosPendientes removeItem={this.removeItem} id={d}  name={d} index={i} key={'k[-'+ i} />)) 
                                     }
                                 </section>
+                            
                                </div>
                     );
 
