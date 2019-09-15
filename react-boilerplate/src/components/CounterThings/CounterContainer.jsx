@@ -5,7 +5,8 @@ const CounterContainer =()=>{
 
 
 		return(
-			<div id='CounterContainer'> 
+			<div id='CounterContainer'
+					style={{color: 'white'}}> 
 				<Counter />
 			</div>
 		)
